@@ -1,0 +1,296 @@
+[gd_scene format=3 uid="uid://dsv3dyyr0p0ft"]
+
+[ext_resource type="Script" uid="uid://c7dcqydwtjk0m" path="res://scenes/GameHandler2.gd" id="1_xa7n4"]
+[ext_resource type="Material" uid="uid://42c0uuauuqy" path="res://back.tres" id="2_bo4dx"]
+[ext_resource type="PackedScene" uid="uid://18qgorg4bg78" path="res://target.tscn" id="3_76toy"]
+[ext_resource type="PackedScene" uid="uid://c67msij4wo3fs" path="res://arrow_generator.tscn" id="4_8g4ke"]
+[ext_resource type="PackedScene" uid="uid://dgvv122tc3so" path="res://arrow_generator_up.tscn" id="5_56gwk"]
+[ext_resource type="PackedScene" uid="uid://0o2lj1j8bocp" path="res://arrow_generator_right.tscn" id="6_ve5ok"]
+[ext_resource type="PackedScene" uid="uid://b8xx4a0llhe" path="res://arrow_generator_left.tscn" id="7_cleqw"]
+[ext_resource type="Script" uid="uid://dev2mwwbf023n" path="res://player_feedback_ui.gd" id="9_g8vcy"]
+[ext_resource type="AudioStream" uid="uid://bw4lxlrxo3wnl" path="res://Songs/Wei_Epilogue.wav" id="11_g8vcy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucufk"]
+size = Vector2(636.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0a554"]
+size = Vector2(642, 161)
+
+[sub_resource type="Animation" id="Animation_272bh"]
+resource_name = "song 1"
+length = 69.0
+step = 0.3
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_g8vcy")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ArrowGenerator")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.285714, 11.942858, 16.142857, 23.242857, 35.914288, 37.314285, 39.857143, 41.257145, 42.857143, 45.057144, 56.942856),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ArrowGeneratorUp")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(8.342857, 24.042856, 32.714287, 38.014286, 39.014286, 39.857143, 42.157146, 52, 55, 57.642857),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ArrowGeneratorRight")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4.285714, 7.714286, 15.042856, 19.542856, 22.842857, 24.042856, 34.11429, 35.11429, 42.857143, 45.757145, 51.285713, 58.442856),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ArrowGeneratorLeft")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(36.61429, 40.657146, 48.857143),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5vw27"]
+_data = {
+&"song 1": SubResource("Animation_272bh")
+}
+
+[sub_resource type="SystemFont" id="SystemFont_0a554"]
+
+[sub_resource type="Theme" id="Theme_ucufk"]
+default_font = SubResource("SystemFont_0a554")
+Label/fonts/font = SubResource("SystemFont_0a554")
+
+[node name="Main" type="Node2D" unique_id=352249489]
+script = ExtResource("1_xa7n4")
+
+[node name="Background" type="Panel" parent="." unique_id=2089089998]
+material = ExtResource("2_bo4dx")
+offset_left = -2.0
+offset_top = -9.0
+offset_right = 649.0
+offset_bottom = 471.0
+
+[node name="Detector" type="Node2D" parent="." unique_id=1197794395]
+
+[node name="Area2D" type="Area2D" parent="Detector" unique_id=2075843231]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector/Area2D" unique_id=1802915180]
+position = Vector2(324.75, 431)
+shape = SubResource("RectangleShape2D_ucufk")
+
+[node name="LeftTarget" parent="Detector" unique_id=2039232801 instance=ExtResource("3_76toy")]
+position = Vector2(185, 420)
+
+[node name="DownTarget" parent="Detector" unique_id=1491210754 instance=ExtResource("3_76toy")]
+position = Vector2(285, 420)
+
+[node name="UpTarget" parent="Detector" unique_id=1696948390 instance=ExtResource("3_76toy")]
+position = Vector2(385, 420)
+
+[node name="RightTarget" parent="Detector" unique_id=276845165 instance=ExtResource("3_76toy")]
+position = Vector2(485, 420)
+
+[node name="Area2D2" type="Area2D" parent="Detector" unique_id=1687947037]
+
+[node name="MissZone" type="CollisionShape2D" parent="Detector/Area2D2" unique_id=2084479380]
+position = Vector2(324, 557.5)
+shape = SubResource("RectangleShape2D_0a554")
+
+[node name="ArrowGenerator" parent="." unique_id=1917168019 instance=ExtResource("4_8g4ke")]
+position = Vector2(285, 0)
+
+[node name="ArrowGeneratorUp" parent="." unique_id=925812116 instance=ExtResource("5_56gwk")]
+position = Vector2(385, 0)
+
+[node name="ArrowGeneratorRight" parent="." unique_id=457239218 instance=ExtResource("6_ve5ok")]
+position = Vector2(485, 0)
+
+[node name="ArrowGeneratorLeft" parent="." unique_id=1433690133 instance=ExtResource("7_cleqw")]
+position = Vector2(185, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=847977464]
+volume_db = 1.364
+
+[node name="GamePlayer" type="AnimationPlayer" parent="." unique_id=1435726750]
+libraries/ = SubResource("AnimationLibrary_5vw27")
+autoplay = &"song 1"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1775283826]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=273479807]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 15.0
+offset_right = 2.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ucufk")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="PlayerFeedbackUI" type="VBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=1780226037]
+layout_mode = 2
+script = ExtResource("9_g8vcy")
+
+[node name="Indicator" type="Label" parent="CanvasLayer/MarginContainer/PlayerFeedbackUI" unique_id=557068750]
+layout_mode = 2
+
+[node name="Timer" type="Timer" parent="CanvasLayer/MarginContainer/PlayerFeedbackUI/Indicator" unique_id=1307090060]
+wait_time = 0.3
+one_shot = true
+
+[node name="Combo" type="Label" parent="CanvasLayer/MarginContainer/PlayerFeedbackUI" unique_id=1346306377]
+layout_mode = 2
+text = "Combo: 0"
+
+[node name="Score" type="Label" parent="CanvasLayer/MarginContainer/PlayerFeedbackUI" unique_id=1134404921]
+layout_mode = 2
+text = "Score: 0"
+
+[node name="Misses" type="Label" parent="CanvasLayer/MarginContainer/PlayerFeedbackUI" unique_id=1822456225]
+layout_mode = 2
+text = "Misses: 0"

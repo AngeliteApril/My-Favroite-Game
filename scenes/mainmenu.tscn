@@ -1,0 +1,215 @@
+[gd_scene format=3 uid="uid://coqshv52hgvmo"]
+
+[ext_resource type="Texture2D" uid="uid://o6l7oo5356n4" path="res://textures/placeholder.png" id="1_5mbse"]
+[ext_resource type="Texture2D" uid="uid://csc6hu61ih7wi" path="res://Songs/4f8270a8-6c00-45c3-bb27-b36792516a9b.webp" id="2_dfy5j"]
+[ext_resource type="Script" uid="uid://bsx3dtjllw13j" path="res://scripts/ScrollFocus.gd" id="2_natt5"]
+[ext_resource type="Texture2D" uid="uid://cpwimvlbeynil" path="res://assets/leaderboard.png" id="3_7yvfd"]
+[ext_resource type="Script" uid="uid://2ycemphdfkss" path="res://scripts/ScrollDetection.gd" id="3_r3g3c"]
+[ext_resource type="Script" uid="uid://dof8u02xs137p" path="res://scenes/ScoreBoardHandler.gd" id="3_s5g8n"]
+[ext_resource type="FontFile" uid="uid://bsgeeyaidclxl" path="res://assets/pixelmix.ttf" id="4_7yvfd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7okha"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_utqmc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q0srp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yfmgw"]
+
+[sub_resource type="Theme" id="Theme_cw06u"]
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_7okha")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_utqmc")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_q0srp")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_yfmgw")
+
+[node name="SongsMenu" type="Control" unique_id=1072254015]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreTemplate" type="Panel" parent="." unique_id=1095410817]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 0
+offset_left = 299.1685
+offset_top = 164.58304
+offset_right = 639.16846
+offset_bottom = 199.58304
+
+[node name="Number" type="Label" parent="ScoreTemplate" unique_id=88832102]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 48.0
+offset_bottom = 23.0
+text = "#1"
+
+[node name="Score" type="Label" parent="ScoreTemplate" unique_id=201783032]
+layout_mode = 0
+offset_left = 33.0
+offset_right = 76.0
+offset_bottom = 23.0
+text = "Score"
+
+[node name="SongTemplate" type="Panel" parent="." unique_id=284816093]
+custom_minimum_size = Vector2(20, 50)
+layout_mode = 0
+offset_left = 11.446042
+offset_top = 139.60999
+offset_right = 296.44604
+offset_bottom = 189.60999
+
+[node name="Difficulty" type="Label" parent="SongTemplate" unique_id=1587334894]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.2
+offset_top = 38.0
+offset_right = -231.8
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 7
+text = "(Difficulty)"
+
+[node name="SongTitle" type="Label" parent="SongTemplate" unique_id=1626587302]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.671998
+offset_top = 2.0
+offset_right = -227.328
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 11
+text = "Song Title:"
+
+[node name="Artist" type="Label" parent="SongTemplate" unique_id=502539785]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 28.0
+offset_right = -227.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 7
+text = "Artist:"
+
+[node name="SongDescription" type="Label" parent="SongTemplate" unique_id=760736368]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 15.0
+offset_right = 199.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 9
+text = "Song Description:"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=764240248]
+visible = false
+layout_mode = 0
+offset_left = 39.16684
+offset_top = 139.60999
+offset_right = 266.16684
+offset_bottom = 183.60999
+size_flags_horizontal = 4
+texture = ExtResource("1_5mbse")
+
+[node name="SongsContainer" type="TextureRect" parent="." unique_id=653795747]
+layout_mode = 0
+offset_right = 665.0
+offset_bottom = 480.0
+scale = Vector2(0.95588857, 0.9989226)
+texture = ExtResource("2_dfy5j")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SongsContainer" unique_id=311447170]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.52576
+offset_top = -222.23944
+offset_right = 325.52576
+offset_bottom = 222.23944
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="ScrollContain" type="ScrollContainer" parent="SongsContainer/HBoxContainer" unique_id=1049531620]
+custom_minimum_size = Vector2(285, 200)
+layout_mode = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_cw06u")
+script = ExtResource("2_natt5")
+
+[node name="SongsContain" type="VBoxContainer" parent="SongsContainer/HBoxContainer/ScrollContain" unique_id=258025710]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 18
+
+[node name="ScoresBoard" type="TextureRect" parent="SongsContainer/HBoxContainer" unique_id=1490754517]
+custom_minimum_size = Vector2(340, 250)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("3_7yvfd")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SongsContainer/HBoxContainer/ScoresBoard" unique_id=1135499101]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 340.0
+offset_bottom = 250.0
+script = ExtResource("3_s5g8n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SongsContainer/HBoxContainer/ScoresBoard/ScrollContainer" unique_id=917731971]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LeaderBoardTitle" type="Label" parent="SongsContainer/HBoxContainer/ScoresBoard" unique_id=908973631]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 351.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("4_7yvfd")
+theme_override_font_sizes/font_size = 24
+text = "Scores LeaderBoard"
+
+[node name="ScrollDetect" type="Panel" parent="." unique_id=1949905075]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -40.0
+offset_right = -30.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_r3g3c")
+
+[node name="Label" type="Label" parent="." unique_id=1821803078]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 385.0
+offset_right = 633.0
+offset_bottom = 499.0
+theme_override_fonts/font = ExtResource("4_7yvfd")
+theme_override_font_sizes/font_size = 35
+text = "D  F  J  K 
+(Or Arrow Keys)"

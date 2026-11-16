@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://fa7jaatvb1bv"]
+
+[ext_resource type="Script" uid="uid://b5wln2bbm8u05" path="res://parent_arrow.gd" id="1_8ofx6"]
+[ext_resource type="Texture2D" uid="uid://cl2wdm5rqo0xe" path="res://arrowDown.png" id="1_l5ahi"]
+
+[node name="Arrow" type="Node2D" unique_id=561605884]
+script = ExtResource("1_8ofx6")
+
+[node name="ArrowDown" type="Sprite2D" parent="." unique_id=1245765850]
+texture = ExtResource("1_l5ahi")

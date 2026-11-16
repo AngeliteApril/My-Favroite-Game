@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://42c0uuauuqy"]
+
+[ext_resource type="Shader" uid="uid://bva7s6vn5jvdm" path="res://back.gdshader" id="1_bk4va"]
+
+[resource]
+shader = ExtResource("1_bk4va")
+shader_parameter/bottom_color = Color(0, 0.4120665, 0.42185098, 1)
+shader_parameter/top_color = Color(0.69423306, 0.4778388, 0.938705, 1)
+shader_parameter/beam_distance = 0.1930000091675
+shader_parameter/beam_height = 0.07600000361
+shader_parameter/beam_width = 0.0
+shader_parameter/total_phases = 8

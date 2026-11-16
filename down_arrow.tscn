@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bksd3piihfs0e"]
+
+[ext_resource type="PackedScene" uid="uid://fa7jaatvb1bv" path="res://ParentArrow.tscn" id="1_fssat"]
+[ext_resource type="Texture2D" uid="uid://br8gxg0wv7mqd" path="res://assets/arrowDown.png" id="2_1frq1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ucufk"]
+radius = 22.022715
+
+[node name="Arrow" unique_id=561605884 instance=ExtResource("1_fssat")]
+
+[node name="ArrowDown" parent="." index="0" unique_id=1245765850]
+scale = Vector2(3, 3)
+texture = ExtResource("2_1frq1")
+
+[node name="Down" type="Area2D" parent="." index="1" unique_id=680871839]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Down" index="0" unique_id=1416337580]
+shape = SubResource("CircleShape2D_ucufk")

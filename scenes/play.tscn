@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://b7n12rno6bf58"]
+
+[ext_resource type="Script" uid="uid://coqcvirk6oidk" path="res://scripts/PlayListener.gd" id="1_8r3iy"]
+[ext_resource type="FontFile" uid="uid://c7fpg76otd1gx" path="res://assets/pixelmix.ttf" id="2_bofkp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ucufk"]
+bg_color = Color(11.708403, 11.708403, 11.708403, 1)
+
+[sub_resource type="Animation" id="Animation_8r3iy"]
+resource_name = "Enter"
+length = 1.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/EnterLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3333334, 1.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["Press Enter to Continue...", "", "Press Enter to Continue.."]
+}
+
+[sub_resource type="Animation" id="Animation_bofkp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/EnterLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Press Enter to Continue..."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bq38n"]
+_data = {
+&"Enter": SubResource("Animation_8r3iy"),
+&"RESET": SubResource("Animation_bofkp")
+}
+
+[node name="PlayListener" type="Control" unique_id=1072254015]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.155
+offset_right = 2.1550293
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8r3iy")
+
+[node name="Panel" type="Panel" parent="." unique_id=328259742]
+layout_mode = 0
+offset_right = 649.0
+offset_bottom = 486.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ucufk")
+
+[node name="EnterLabel" type="Label" parent="Panel" unique_id=339761674]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -11.5
+offset_right = 98.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.11119685, 0.11119684, 0.11119684, 1)
+theme_override_fonts/font = ExtResource("2_bofkp")
+text = "Press Enter to Continue..."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=453730799]
+libraries/ = SubResource("AnimationLibrary_bq38n")

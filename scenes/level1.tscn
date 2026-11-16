@@ -1,0 +1,2192 @@
+[gd_scene format=3 uid="uid://daecfma8r4ngs"]
+
+[ext_resource type="Script" uid="uid://c2jjhnbkfkfar" path="res://scenes/GameHandler1.gd" id="1_conm7"]
+[ext_resource type="Material" uid="uid://42c0uuauuqy" path="res://back.tres" id="2_olg7q"]
+[ext_resource type="PackedScene" uid="uid://18qgorg4bg78" path="res://target.tscn" id="3_t1rx8"]
+[ext_resource type="PackedScene" uid="uid://c67msij4wo3fs" path="res://arrow_generator.tscn" id="4_8iemx"]
+[ext_resource type="PackedScene" uid="uid://dgvv122tc3so" path="res://arrow_generator_up.tscn" id="5_64w2a"]
+[ext_resource type="PackedScene" uid="uid://0o2lj1j8bocp" path="res://arrow_generator_right.tscn" id="6_fpun6"]
+[ext_resource type="PackedScene" uid="uid://b8xx4a0llhe" path="res://arrow_generator_left.tscn" id="7_wc255"]
+[ext_resource type="AudioStream" uid="uid://bmr3qub5heirb" path="res://Songs/Catena_3.wav" id="8_u3awl"]
+[ext_resource type="AudioStream" uid="uid://duwdfai5sg2x8" path="res://Songs/Nocturne.wav" id="9_2ku1j"]
+[ext_resource type="Script" uid="uid://dev2mwwbf023n" path="res://player_feedback_ui.gd" id="9_ux5qa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucufk"]
+size = Vector2(636.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0a554"]
+size = Vector2(642, 161)
+
+[sub_resource type="Animation" id="Animation_efxa6"]
+resource_name = "Song 2"
+length = 69.0
+step = 0.166
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ArrowGeneratorLeft")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(8.666666, 11.333333, 12.666666, 13.5, 14, 15.833333, 16.666668, 17.333334, 19.833334, 20.833334, 21.833334, 25.166668, 26, 29.166668, 30.166668, 33.166664, 34.5, 37.833332, 38.833332, 39.5, 41.833332, 43.5, 44.833332, 46.166664, 47.5, 48.5, 49.5, 50.166664, 51.166664, 51.833332, 53.166664, 54.166664, 55.5, 56.5, 58.5, 59.833332, 60.5, 61.333332, 61.833332, 63.166664, 63.833332),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ArrowGenerator")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(9.833333, 13.333333, 15.999999, 17.5, 19.666668, 21.5, 22.166668, 26.666668, 27.333334, 29.833334, 32.5, 33.833332, 37.166664, 39.166664, 39.833332, 40.833332, 41.666664, 42.833332, 44.5, 45.333332, 45.833332, 46.833332, 48.166664, 49.166664, 50, 51.5, 52.5, 53.5, 55.166664, 56.166664, 57.166664, 57.833332, 59.166664, 60.833332, 62.166664, 63.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../ArrowGeneratorUp")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(9.166666, 10.666666, 12.166666, 13, 14, 16.166668, 17.166668, 20.166668, 20.833334, 24.5, 29.5, 31.833334, 32.833332, 34.5, 37.5, 38.833332, 40, 41.5, 44.166664, 45.166664, 46.5, 47.833332, 48.5, 49.5, 50.833332, 52.166664, 54.166664, 55.333332, 55.833332, 57.5, 58.333332, 58.833332, 59.5, 61.5, 62.833332, 64.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../ArrowGeneratorRight")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(11.833333, 12.5, 13.666666, 16.5, 19.5, 20.5, 21.166668, 22.166668, 25.5, 27.333334, 30.5, 32.166664, 33.5, 38.5, 40.166664, 42.166664, 43.833332, 45.5, 47.166664, 48.833332, 49.333332, 49.833332, 50.5, 52.833332, 53.833332, 54.833332, 56.833332, 58.166664, 60.166664, 61.166664, 62.5, 63.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("8_u3awl")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_dg77c"]
+resource_name = "Song 3"
+length = 83.5
+step = 0.333
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Song 3")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 4.0,
+"stream": ExtResource("9_2ku1j")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ArrowGeneratorLeft")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(14, 14.5, 15, 16, 16.666666, 17.166666, 17.666666, 18.666666, 19.166666, 19.666666, 20.166666, 21.166666, 21.833334, 24.666666, 25.166666, 25.666666, 30.166664, 30.833332, 31.333332, 31.833332, 32.833332, 33.333332, 33.833332, 34.333332, 35, 35.5, 36, 37, 37.666664, 38.333336, 38.833336, 39.333336, 39.833336, 40.500004, 41.000004, 41.500004, 41.833336, 42.500004, 43.000004, 43.500004, 44.500004, 45.666668, 46.666668, 47.333332, 47.666668, 48.166668, 49.166668, 49.833336, 50.333336, 50.833336, 51.999996, 53.16666, 54.16666, 54.833324, 55.16666, 55.66666, 56.66666, 57.33333, 57.83333, 58.33333, 59.333332, 60.5, 61.5, 62.166656, 62.5, 63, 64, 64.666664, 65.166664, 65.666664, 66.666664, 67.83333, 68.83333, 69.49999, 69.83333, 71.16667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ArrowGenerator")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(14.166666, 14.833334, 15.5, 16.166666, 16.5, 16.833332, 17.5, 18.166666, 18.833332, 19.166666, 19.333332, 20, 20.666666, 21.333332, 21.666666, 24.5, 24.833332, 25.5, 26.166666, 29.666664, 30.333332, 30.666664, 31, 31.666664, 32.333332, 33, 33.333332, 33.5, 34.166664, 35.166664, 35.833336, 36.5, 37.166664, 37.5, 37.833336, 38.500004, 38.833336, 39.000004, 39.666668, 40.666668, 41.33334, 41.666668, 42.666668, 43.33334, 44.000004, 44.666668, 45.5, 46.166668, 46.833332, 47.166668, 48, 48.666668, 49.333336, 49.666668, 50, 50.666668, 51.499996, 52.16666, 52.999992, 53.66666, 54.333324, 54.66666, 55.499992, 56.16666, 56.83333, 57.16666, 57.499992, 58.16666, 58.833332, 59.499996, 60.33333, 61, 61.666656, 62, 62.83333, 63.5, 64.166664, 64.5, 64.83333, 65.5, 66.166664, 66.83333, 67.666664, 68.33333, 68.99999, 69.33333, 70.66667, 71.333336, 71.66667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ArrowGeneratorUp")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(14, 14.666666, 15.166666, 15.666666, 16.333334, 17.333332, 17.833332, 18.333332, 19, 19.833332, 20.166666, 20.333332, 20.833332, 21.5, 25.333332, 25.833332, 26.333332, 29.833332, 30.5, 31.5, 32, 32.5, 33.166664, 34, 34.333332, 35, 35.666664, 36.166664, 36.666664, 37.333336, 38.000004, 38.666668, 39.500004, 39.833336, 40.500004, 41.166668, 41.833336, 42.500004, 43.166668, 43.666668, 44.166668, 44.83334, 45.333332, 45.666668, 45.833332, 46.333332, 47, 47.833336, 48.333336, 48.833336, 49.5, 50.5, 51, 51.66666, 52.333332, 52.833324, 53.16666, 53.333324, 53.833324, 54.499992, 55.33333, 55.83333, 56.33333, 56.999992, 57.999992, 58.499992, 58.999996, 59.666668, 60.166656, 60.5, 60.666656, 61.166656, 61.83333, 62.666664, 63.166664, 63.666664, 64.33333, 65.33333, 65.83333, 66.33333, 67, 67.49999, 67.83333, 67.99999, 68.49999, 69.166664, 69.99999, 70.333336, 70.833336, 71.50001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ArrowGeneratorRight")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(14.833334, 15.333334, 15.833334, 16.666666, 16.833334, 17.5, 18, 18.5, 19.333332, 19.666666, 20.5, 21, 21.833332, 24.666666, 24.833334, 25.5, 26, 26.5, 29.5, 30, 30.833332, 31, 31.666664, 32.166664, 32.666664, 33.5, 33.833332, 34.5, 35.833336, 36.333336, 36.833336, 37.666668, 38.166668, 39.000004, 39.333336, 40.000004, 41.33334, 42.000004, 43.33334, 43.83334, 44.33334, 45, 46, 46.5, 48, 48.5, 49, 49.833336, 50, 50.666668, 51.333332, 51.833332, 52.499992, 53.499992, 53.999992, 55.499992, 55.999992, 56.499992, 57.33333, 57.499992, 58.16666, 58.666668, 59.166668, 59.83333, 60.83333, 61.33333, 62.83333, 63.33333, 63.83333, 64.666664, 64.83333, 65.5, 66, 66.5, 67.166664, 68.166664, 68.666664, 70.50001, 71.00001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_272bh"]
+resource_name = "song 1"
+length = 69.0
+step = 0.15
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("8_u3awl")
+}],
+"times": PackedFloat32Array(0.14285715)
+}
+tracks/0/use_blend = true
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ArrowGeneratorLeft")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(8.976191, 11.642858, 12.976191, 13.809525, 14.309525, 16.142857, 16.97619, 17.642857, 20.142857, 21.142857, 22.142857, 25.47619, 26.309523, 29.47619, 30.47619, 33.47619, 34.809525, 38.142857, 39.142857, 39.809525, 42.142857, 43.809525, 45.142857, 46.47619, 47.809525, 48.809525, 49.809525, 50.47619, 51.47619, 52.142857, 53.47619, 54.47619, 55.809525, 56.809525, 58.809525, 60.142857, 60.809525, 61.642857, 62.142857, 63.47619, 64.14286),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../ArrowGenerator")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(10.142858, 13.642858, 16.309523, 17.809523, 19.97619, 21.809523, 22.47619, 26.97619, 27.642857, 30.142857, 32.809525, 34.142857, 37.47619, 39.47619, 40.142857, 41.142857, 41.97619, 43.142857, 44.809525, 45.642857, 46.142857, 47.142857, 48.47619, 49.47619, 50.309525, 51.809525, 52.809525, 53.809525, 55.47619, 56.47619, 57.47619, 58.142857, 59.47619, 61.142857, 62.47619, 63.809525),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../ArrowGeneratorUp")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(9.476191, 10.976191, 12.476191, 13.309525, 14.309525, 16.47619, 17.47619, 20.47619, 21.142857, 24.809523, 29.809523, 32.142857, 33.142857, 34.809525, 37.809525, 39.142857, 40.309525, 41.809525, 44.47619, 45.47619, 46.809525, 48.142857, 48.809525, 49.809525, 51.142857, 52.47619, 54.47619, 55.642857, 56.142857, 57.809525, 58.642857, 59.142857, 59.809525, 61.809525, 63.142857, 64.809525),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../ArrowGeneratorRight")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(12.142858, 12.809525, 13.976191, 16.809523, 19.809523, 20.809523, 21.47619, 22.47619, 25.809523, 27.642857, 30.809523, 32.47619, 33.809525, 38.809525, 40.47619, 42.47619, 44.142857, 45.809525, 47.47619, 49.142857, 49.642857, 50.142857, 50.809525, 53.142857, 54.142857, 55.142857, 57.142857, 58.47619, 60.47619, 61.47619, 62.809525, 63.809525),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}, {
+"args": [],
+"method": &"make_arrow"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gnai3"]
+_data = {
+&"Song 2": SubResource("Animation_efxa6"),
+&"Song 3": SubResource("Animation_dg77c"),
+&"song 1": SubResource("Animation_272bh")
+}
+
+[sub_resource type="SystemFont" id="SystemFont_0a554"]
+subpixel_positioning = 0
+
+[sub_resource type="Theme" id="Theme_ucufk"]
+default_font = SubResource("SystemFont_0a554")
+Label/fonts/font = SubResource("SystemFont_0a554")
+
+[node name="Main2" type="Node2D" unique_id=352249489]
+script = ExtResource("1_conm7")
+
+[node name="Background" type="Panel" parent="." unique_id=2089089998]
+material = ExtResource("2_olg7q")
+offset_left = -2.0
+offset_top = -9.0
+offset_right = 649.0
+offset_bottom = 471.0
+
+[node name="Detector" type="Node2D" parent="." unique_id=1197794395]
+
+[node name="Area2D" type="Area2D" parent="Detector" unique_id=2075843231]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector/Area2D" unique_id=1802915180]
+position = Vector2(324.75, 431)
+shape = SubResource("RectangleShape2D_ucufk")
+
+[node name="LeftTarget" parent="Detector" unique_id=2039232801 instance=ExtResource("3_t1rx8")]
+position = Vector2(185, 420)
+
+[node name="DownTarget" parent="Detector" unique_id=1491210754 instance=ExtResource("3_t1rx8")]
+position = Vector2(285, 420)
+
+[node name="UpTarget" parent="Detector" unique_id=1696948390 instance=ExtResource("3_t1rx8")]
+position = Vector2(385, 420)
+
+[node name="RightTarget" parent="Detector" unique_id=276845165 instance=ExtResource("3_t1rx8")]
+position = Vector2(485, 420)
+
+[node name="Area2D2" type="Area2D" parent="Detector" unique_id=1687947037]
+
+[node name="MissZone" type="CollisionShape2D" parent="Detector/Area2D2" unique_id=2084479380]
+position = Vector2(324, 557.5)
+shape = SubResource("RectangleShape2D_0a554")
+
+[node name="ArrowGenerator" parent="." unique_id=1917168019 instance=ExtResource("4_8iemx")]
+position = Vector2(285, 0)
+
+[node name="ArrowGeneratorUp" parent="." unique_id=925812116 instance=ExtResource("5_64w2a")]
+position = Vector2(385, 0)
+
+[node name="ArrowGeneratorRight" parent="." unique_id=457239218 instance=ExtResource("6_fpun6")]
+position = Vector2(485, 0)
+
+[node name="ArrowGeneratorLeft" parent="." unique_id=1433690133 instance=ExtResource("7_wc255")]
+position = Vector2(185, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=847977464]
+
+[node name="GamePlayer" type="AnimationPlayer" parent="." unique_id=1155047674]
+root_node = NodePath("../AudioStreamPlayer")
+libraries/ = SubResource("AnimationLibrary_gnai3")
+autoplay = &"Song 2"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1775283826]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=273479807]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 15.0
+offset_right = 2.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ucufk")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="PlayerFeedbackUI" type="VBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=1780226037]
+layout_mode = 2
+script = ExtResource("9_ux5qa")
+
+[node name="Indicator" type="Label" parent="CanvasLayer/MarginContainer/PlayerFeedbackUI" unique_id=557068750]
+layout_mode = 2
+
+[node name="Timer" type="Timer" parent="CanvasLayer/MarginContainer/PlayerFeedbackUI/Indicator" unique_id=1307090060]
+wait_time = 0.3
+one_shot = true
+
+[node name="Combo" type="Label" parent="CanvasLayer/MarginContainer/PlayerFeedbackUI" unique_id=1346306377]
+layout_mode = 2
+text = "Combo: 0"
+
+[node name="Score" type="Label" parent="CanvasLayer/MarginContainer/PlayerFeedbackUI" unique_id=1134404921]
+layout_mode = 2
+text = "Score: 0"
+
+[node name="Misses" type="Label" parent="CanvasLayer/MarginContainer/PlayerFeedbackUI" unique_id=1822456225]
+layout_mode = 2
+text = "Misses: 0"

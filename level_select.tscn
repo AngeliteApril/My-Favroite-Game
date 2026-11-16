@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dp3a6vg35ax2h"]
+
+[ext_resource type="Texture2D" uid="uid://b4bv5fn6gkfkv" path="res://gear.png" id="1_il3u1"]
+[ext_resource type="Script" uid="uid://dyffto8ja0bll" path="res://level_select.gd" id="1_vomi7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ucufk"]
+bg_color = Color(11.708403, 11.708403, 11.708403, 1)
+
+[node name="LevelSelect" type="Control" unique_id=1072254015]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vomi7")
+
+[node name="Panel" type="Panel" parent="." unique_id=328259742]
+layout_mode = 0
+offset_right = 649.0
+offset_bottom = 486.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ucufk")
+
+[node name="Pink" type="Sprite2D" parent="Panel" unique_id=1040385929]
+modulate = Color(1, 0.8, 0.90588236, 1)
+position = Vector2(132, 403)
+scale = Vector2(3, 3)
+texture = ExtResource("1_il3u1")
+
+[node name="Blue" type="Sprite2D" parent="Panel" unique_id=418218004]
+modulate = Color(0.70695436, 0.92188877, 0.999675, 1)
+position = Vector2(78, 344)
+scale = Vector2(3, 3)
+texture = ExtResource("1_il3u1")
+
+[node name="Yellow" type="Sprite2D" parent="Panel" unique_id=1682188863]
+modulate = Color(0.9700168, 0.97506326, 0.783228, 1)
+position = Vector2(211, 366)
+scale = Vector2(3, 3)
+texture = ExtResource("1_il3u1")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1449095945]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=205899104]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=643566875]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 43
+text = "LEVEL SELECT!"
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=388324773]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Biri-Biri"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
